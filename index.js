@@ -137,22 +137,18 @@ function appMenu() {
 				message: "what is the engineer's git hub username?"
 			}
 		])
-		.then(function({
-			engineerName,
-			engineerId,
-			engineerEmail,
-			engineerGithub
-		}) {
+
+		.then((answers) => {
 			const engineer = new Engineer(
-				engineerName,
-				engineerId,
-				engineerEmail,
-				engineerGithub
+			  answers.engineerName,
+			  answers.engineerId,
+			  answers.engineerEmail,
+			  answers.engineerGithub
 			);
 			teamMembers.push(engineer);
-      idArray.push(answers.engineerId);
+			idArray.push(answers.engineerId);
 			createTeam();
-		});
+		  });
   }
 
   function addIntern() {
@@ -179,18 +175,19 @@ function appMenu() {
 				message: "what is the name of the school the intern is attending?"
 			}
 		])
-		.then(function({ internName, internId, internEmail, internSchool }) {
+
+		.then((answers) => {
 			const intern = new Intern(
-				internName,
-				internId,
-				internEmail,
-				internSchool
+			  answers.internName,
+			  answers.internId,
+			  answers.internId,
+			  answers.internSchool
 			);
 			teamMembers.push(intern);
-      idArray.push(answers.internId);
+			idArray.push(answers.internId);
 			createTeam();
-		});
-  }
+		  });
+  };
 
   function buildTeam() {
     // Create the output directory if the dist path doesn't exist
@@ -202,5 +199,4 @@ function appMenu() {
 
   createManager();
 }
-
 appMenu();
