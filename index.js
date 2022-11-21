@@ -83,7 +83,7 @@ function appMenu() {
         idArray.push(answers.managerId);
         createTeam();
       });
-  }
+  	}
 
   function createTeam() {
     return inquirer
@@ -111,7 +111,7 @@ function appMenu() {
 					generateCards(teamMembers, idArray);
 			}
 		});
-  }
+  };
 
   function addEngineer() {
     return inquirer
@@ -149,7 +149,7 @@ function appMenu() {
 			idArray.push(answers.engineerId);
 			createTeam();
 		  });
-  }
+  	}
 
   function addIntern() {
     return inquirer
@@ -187,7 +187,7 @@ function appMenu() {
 			idArray.push(answers.internId);
 			createTeam();
 		  });
-  };
+  	};
 
   function buildTeam() {
     // Create the output directory if the dist path doesn't exist
@@ -198,5 +198,6 @@ function appMenu() {
   }
 
   createManager();
+  buildTeam();
 }
 appMenu();

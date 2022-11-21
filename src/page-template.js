@@ -1,4 +1,3 @@
-// create the team
 const generateTeam = team => {
 
     // create the manager html
@@ -25,14 +24,14 @@ const generateTeam = team => {
         return `
     <div class="card text-white bg-dark ml-3">
         <div class="card-header">
-            <h2 class="card-title">${engineer.name}</h2>
+            <h2 class="card-title">${engineer.getName()}</h2>
             <h3 class="mr-3">${engineer.getRole()}
 			</h3>
         </div>
         <div class="card-body text-white bg-dark">
         
-                <p>ID: ${engineer.id}</p>
-                <p>Email: ${engineer.email}<a href="mailto:${engineer.email}"></a></p>
+                <p>ID: ${engineer.getId()}</p>
+                <p>Email: ${engineer.getEmail()}<a href="mailto:${engineer.getEmail()}"></a></p>
                 <p>GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></p>
         
         </div>
@@ -44,15 +43,15 @@ const generateTeam = team => {
         return `
     <div class="card border-danger ml-3">
         <div class="card-header">
-            <h2 class="card-title text-danger">${intern.name}</h2>
+            <h2 class="card-title text-danger">${intern.getName()}</h2>
 			<h3 class="mr-3 text-danger"></i>${intern.getRole()}
 			</h3>
         </div>
         <div class="card-body border-danger">
             
-                <p>ID: ${intern.id}</p>
-                <p>Email: ${intern.email}<a href="mailto:${intern.email}"></a></p>
-                <p>School: ${intern.school}</p>
+                <p>ID: ${intern.getId()}</p>
+                <p>Email: ${intern.getEmail()}<a href="mailto:${intern.getEmail()}"></a></p>
+                <p>School: ${intern.getSchool()}</p>
             
         </div>
     </div>`;
@@ -85,7 +84,6 @@ module.exports = team => {
     return `
     <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -96,7 +94,6 @@ module.exports = team => {
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="row">
