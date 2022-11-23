@@ -3,7 +3,7 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div class="card employee-card">
+        <div class="card employee-card" id="manager-card">
         <div class="card-header">
             <h2 class="card-title">${manager.getName()}</h2>
             <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
@@ -22,18 +22,18 @@ const generateTeam = team => {
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-    <div class="card text-white bg-dark ml-3">
+    <div class="card employee-card text-white bg-dark ml-3">
         <div class="card-header">
             <h2 class="card-title">${engineer.getName()}</h2>
             <h3 class="mr-3">${engineer.getRole()}
 			</h3>
         </div>
         <div class="card-body text-white bg-dark">
-        
-                <p>ID: ${engineer.getId()}</p>
-                <p>Email: ${engineer.getEmail()}<a href="mailto:${engineer.getEmail()}"></a></p>
-                <p>GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></p>
-        
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${engineer.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
+            </ul>
         </div>
     </div>`;
 	};
@@ -41,18 +41,18 @@ const generateTeam = team => {
     // create the html for interns
     const generateIntern = intern => {
         return `
-    <div class="card border-danger ml-3">
+    <div class="card employee-card border-danger ml-3">
         <div class="card-header">
             <h2 class="card-title text-danger">${intern.getName()}</h2>
 			<h3 class="mr-3 text-danger"></i>${intern.getRole()}
 			</h3>
         </div>
         <div class="card-body border-danger">
-            
-                <p>ID: ${intern.getId()}</p>
-                <p>Email: ${intern.getEmail()}<a href="mailto:${intern.getEmail()}"></a></p>
-                <p>School: ${intern.getSchool()}</p>
-            
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${intern.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                <li class="list-group-item">School: ${intern.getSchool()}</li>
+            </ul>
         </div>
     </div>`;
 	};
