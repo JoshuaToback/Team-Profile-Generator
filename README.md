@@ -19,7 +19,7 @@
   ## Usage
   After you have Git Bash open, use code . to open up the repository in VS Code. Then in the terminal, type npm start and you can start building your team!
 
-  If everything is insalled correctly, it should look like this! ![npmStart](/Images/npmStart.png)
+  If everything is installed correctly, it should look like this! ![npmStart](/Images/npmStart.png)
 
   After that, start filling out the questions as they pop up. Describe your manager (as seen here) and then press enter! You'll then be presented with the option to add an engineer or intern to your team.
 
